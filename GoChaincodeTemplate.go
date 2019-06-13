@@ -19,7 +19,13 @@ func (token *TokenChaincode) Init(stub shim.ChaincodeStubInterface) peer.Respons
 // Invoke method
 func (token *TokenChaincode) Invoke(stub shim.ChaincodeStubInterface) peer.Response{
 	fmt.Println("Invoke succeed")
-	return shim.Success(nil)
+
+	//return success function
+	payload := []byte("This the payload")
+	return shim.Success(payload)
+
+	//Below Function is the instance of response reporting in case of response !=200
+//	return peer.Response{Status:401, Message: "Unauthorized", Payload: payload}
 }
 
 func main(){
