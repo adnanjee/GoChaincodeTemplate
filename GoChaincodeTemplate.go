@@ -12,13 +12,13 @@ type TokenChaincode struct {
 
 //Init Implemets the Init method
 func (token *TokenChaincode) Init(stub shim.ChaincodeStubInterface) peer.Response{
-	fmt.Println("Init Executed");
-	return shim.Success(nil);
+	fmt.Println("Init Executed")
+	return shim.Success(nil)
 }
 
 // Invoke method
 func (token *TokenChaincode) Invoke(stub shim.ChaincodeStubInterface) peer.Response{
-	fmt.Println("Invoke succeed");
+	fmt.Println("Invoke succeed")
 	return shim.Success(nil)
 }
 
